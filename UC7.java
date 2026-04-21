@@ -1,0 +1,23 @@
+public class uc7{
+public static void main(String[] args) {
+
+        if (args.length == 0) {
+            System.out.println("Hello, World!");
+            return;
+        } else {
+            String names = String.join(", ", args);
+            System.out.println("Hello, " + names + "!");
+        }
+
+        StringBuilder nameBuilder = new StringBuilder();
+
+        for (String name : args) {
+            nameBuilder.append(name).append(", ");
+        }
+
+        String names = nameBuilder.substring(0, nameBuilder.length() - 2);
+
+        System.out.println("Hello, " + names + "!");
+    }
+
+}
